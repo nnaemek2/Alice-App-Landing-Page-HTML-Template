@@ -1,0 +1,1212 @@
+/*
+Author       : Themes_Mountain
+Template Name: Alice - App Landing Page HTML Template
+Version      : 1.0
+*/
+/*=============================================================
+    CSS INDEX
+    =============================
+    01. GENERAL STYLE (body, link color, section-title, preloader btn, overlay, section-padding etc)
+    02. BOOTSTRAP NAVIGATION OVERRIDES
+    03. START HOME DESIGN
+    04. START ABOUT US DESIGN
+    05. START FEATURE ONE AND FEATURE TWO DESIGN
+    06. START AMAZING FEATURES DESIGN
+    07. START HOW IT WORKS DESIGN
+    08. START APP SCREENSHOT DESIGN
+    09. START HOW IT WORKS DESIGN
+    10. START PRICING DESIGN
+    11. START TESTIMONIAL DESIGN
+    12. START DOWNLOAD DESIGN
+    13. START FAQ DESIGN
+    14. START NEWSLETTER DESIGN
+    15. START CONTACT ADDRESS & CONTACT FORM DESIGN
+    16. START FOOTER DESIGN
+  =============================================================*/
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+body {
+color: #444;
+font-family: 'Poppins', sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+background:#fff;
+overflow-x:hidden;
+}
+html,
+body { height: 100% }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1d293e;
+    font-weight: 600;
+}
+a {
+	font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+p {
+    margin-bottom: 0;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+/*START PRELOADER DESIGN*/
+.preloader {
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
+
+.status-mes {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -40px 0 0 -40px;
+    font-size: 10px;
+    text-indent: -12345px;
+    border-top: 7px solid rgba(0, 0, 0, 0.08);
+    border-right: 7px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 7px solid rgba(0, 0, 0, 0.08);
+    border-left: 7px solid #0da3fb;
+    border-radius: 50%;
+    -webkit-animation: spinner 700ms infinite linear;
+    animation: spinner 700ms infinite linear;
+    z-index: 10000;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.no-padding { padding: 0 }
+/*END PRELOADER DESIGN*/
+/*START SCROLL TO TOP*/
+.topcontrol {
+background: #0da3fb none repeat scroll 0 0;
+border-radius: 5px;
+bottom: 5px;
+box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+color: #fff;
+cursor: pointer;
+font-size: 22px;
+height: 35px;
+line-height: 33px;
+opacity: 1;
+position: fixed;
+right: 5px;
+text-align: center;
+transition: all 0.2s ease 0s;
+width: 35px;
+}
+.topcontrol:hover {
+    background: #1d293e;
+    color: #fff;
+}
+/*END SCROLL TO TOP*/
+.section-padding { padding:80px 0 }
+/*START SECTION TITLE DESIGN*/
+.section-title { margin-bottom: 60px }
+.section-title  h2 {
+color: #1d293e;
+font-size: 40px;
+font-weight: 600;
+margin-top: 0;
+position: relative;
+text-transform: capitalize;
+}
+@media only screen and (max-width:480px) { 
+.section-title  h2 {font-size:30px; }
+}
+.section-title-white{color: #fff !important;}
+.section-title  h2 span{color: #0da3fb;}
+.section-title div{
+border-bottom: 1px dashed #777;
+display: block;
+margin: 15px auto;
+width: 80px;
+position:relative;
+}
+@media only screen and (max-width:480px) { 
+.section-title  p{padding:0 15px}
+}
+/*END SECTION TITLE DESIGN*/
+/*
+* ----------------------------------------------------------------------------------------
+* 01.END GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 02. START BOOTSTRAP NAVIGATION OVERRIDES
+* ----------------------------------------------------------------------------------------
+*/
+.navbar-default {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: none;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+}
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #fff !important;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    color: #fff !important;
+    background-color: transparent;
+}
+.navbar-brand { padding: 0px }
+.navbar-brand img {
+    width: 150px;
+    margin-left: 10px;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form { border-color: #0d9cea; }
+.menu-top li a {
+	color: #fff !important;
+	font-size: 16px;
+	text-transform: capitalize;
+	font-family: 'Poppins', sans-serif;
+}
+.menu-top li a:hover { color: #fff!important }
+@media only screen and (max-width:768px) { 
+    .navbar-default .navbar-nav > li > a {
+        margin-top: 10px;
+        padding: 8px;
+    }
+}
+@media only screen and (max-width:480px) { 
+    .menu-top { background:linear-gradient(34deg, #0d9cea 0%, #0c8cd3 100%); }
+    .navbar-default .navbar-nav > li > a { color: #fff  !important }
+}
+.navbar-default.menu-shrink {
+background:linear-gradient(34deg, #0d9cea 0%, #0c8cd3 100%);
+padding: 15px 0;
+width: 100%;
+ margin-top:0px
+}
+@media only screen and (max-width:480px) { 
+    .menu-top {
+        color: #fff !important;
+        margin-left: 0px;
+    }
+}
+.navbar-default.menu-shrink li a {color:#fff !important; }
+.navbar-default.menu-shrink li a:hover { color: #fff !important }
+.navbar-default .navbar-toggle { background: #fff none repeat scroll 0 0 }
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { background-color: #fff }
+.navbar-default .navbar-toggle .icon-bar { background-color: #0da3fb }
+/*
+* ----------------------------------------------------------------------------------------
+* 02.END BOOTSTRAP NAVIGATION OVERRIDES
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 03.START HOME DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.home_bg {
+    height: 700px;
+    position: relative;
+}
+@media only screen and (max-width:768px) { 
+.home_bg {height: 1048px;}
+}
+
+@media only screen and (max-width:480px) { 
+.home_bg {height: 1150px;}
+}
+@media only screen and (max-width:414px) { 
+.home_bg {height: 1150px;}
+}
+@media only screen and (max-width:375px) { 
+.home_bg {height: 1150px;}
+}
+
+@media only screen and (max-width:360px) { 
+.home_bg {height: 1100px;}
+}
+@media only screen and (max-width:320px) { 
+.home_bg {height: 1100px;}
+}
+.home_bg:before {
+    background: rgba(0, 0, 0, 0.4);
+    content: "";
+    height: 100%;
+    filter: alpha(opacity=80);
+    position: absolute;
+    width: 100%;
+}
+.hero-text h2 {
+	color: #fff;
+	font-size: 66px;
+	letter-spacing: 0;
+	line-height: 80px;
+	padding-top: 200px;
+	text-transform: capitalize;
+}
+@media only screen and (max-width:768px) { 
+.hero-text h2 {
+font-size: 40px;
+line-height: 46px;
+}
+}
+@media only screen and (max-width:480px) { 
+    .hero-text h2 {
+		padding-top: 200px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+@media only screen and (max-width:360px) { 
+    .hero-text h2 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+}
+.hero-text p {
+    color: #fff;
+
+}
+.home_btn{
+margin-left: -10px;
+margin-top: 30px;
+}
+.app-btn {
+	background-image: linear-gradient(158deg, #35e2fc 0%, #0da3fb 100%);
+	border-radius: 30px;
+	background-size: 200% auto;
+	border-style: none;
+	color: #fff;
+	font-weight: 700;
+	padding: 14px 40px;
+	transition: 0.5s;
+	text-transform: uppercase;
+	z-index: 1;
+	overflow: hidden;
+	display: inline-block;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	font-size: 14px;
+}
+.app-btn:hover{
+color: #fff;
+background-position: right center;
+}
+.hero-text-img {
+    padding-top: 150px;
+}
+.hero-text-img img {
+  width: 406px;
+}
+@media only screen and (max-width:768px) { 
+.hero-text-img{padding-top: 58px; }
+}
+@media only screen and (max-width:480px) { 
+.hero-text-img{
+display: inline-block;
+padding-top: 112px;
+}
+.hero-text-img img {width: 100%;}
+}
+@media only screen and (max-width:414px) { 
+.hero-text-img{padding-top: 110px; }
+}
+@media only screen and (max-width:375px) { 
+.hero-text-img{padding-top: 128px; }
+}
+@media only screen and (max-width:360px) { 
+.hero-text-img{padding-top: 116px; }
+}
+@media only screen and (max-width:320px) { 
+.hero-text-img{padding-top: 171px; }
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03.END HOME DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 04.START FEATURE DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.feature{padding-bottom:60px;}
+.features_titles{}
+.features_titles h1 {
+	font-size: 24px;
+	line-height: 38px;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 60px;
+	font-weight: 600;
+}
+.single_about {
+	background: #fff none repeat scroll 0 0;
+	border-bottom: 1px solid #eee;
+	padding: 40px;
+	border-radius: 5px;
+	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.15);
+	transition: all 0.4s ease 0s;
+}
+.single_about_one{background:#0da3fb;}
+.single_about_two{background:#0f3460;}
+.single_about_three{background:#2ca46d;}
+.single_about_four{background:#f54291;}
+@media only screen and (max-width:768px) { 
+    .single_about { margin-bottom: 40px }
+}
+.single_about i {
+background: #fff none repeat scroll 0 0;
+border: 1px solid #fff;
+border-radius: 50%;
+color: #0da3fb;
+display: inline-block;
+font-size: 24px;
+height: 60px;
+line-height: 60px;
+margin: 0 0 24px;
+text-align: center;
+text-decoration: none;
+transition: all 0.2s ease-in-out 0s;
+width: 60px;
+}
+.single_about:hover  i{transform:scale(1.1)}
+.single_about h4 {
+	color:#fff;
+	margin-bottom: 25px;
+	font-size: 20px;
+	text-transform: capitalize;
+	transition: all 0.2s ease-in-out 0s;
+}
+.single_about p {
+	color:#fff;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 04.END FEATURE DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+
+
+/*
+ * ----------------------------------------------------------------------------------------
+ * 05.START FEATURE ONE AND FEATURE TWO DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+.feature-one{}
+.single_feature_img{text-align: center;}
+.single_feature_img img{display: inline-block;}
+.single_feature_one{padding-top: 100px;}
+@media only screen and (max-width:768px) { 
+.single_feature_one{padding-bottom: 50px;
+padding-top: 0;}
+}
+.single_feature_one h3{
+color: #2a2b2f;
+font-size: 45px;
+font-weight: normal;
+line-height: 50px;
+margin: 0;
+}
+@media only screen and (max-width:480px) { 
+.single_feature_one h3{font-size:30px;line-height:40px;}
+}
+.single_feature_one p{	margin-top: 20px;
+	margin-bottom: 40px;}
+
+/*START FEATURE TWO DESIGN*/
+.feature-two{}
+.single_feature_two{padding-top:10px;}
+@media only screen and (max-width:768px) { 
+.single_feature_two{padding-top: 50px;}
+}
+@media only screen and (max-width:480px) { 
+.single_feature_two{padding-bottom: 0;
+padding-top: 50px;}
+}
+.single_feature_two h3{
+color: #2a2b2f;
+font-size: 45px;
+font-weight: normal;
+line-height: 50px;
+margin: 0;
+}
+@media only screen and (max-width:480px) { 
+.single_feature_two h3{font-size:30px;line-height:40px;}
+}
+.single_feature_two p {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+.single_feature_two_img{padding-right: 50px;}
+@media only screen and (max-width:768px) { 
+.single_feature_two_img{padding-right:0px;}
+}
+
+.single_feature_two_img img{}
+/*END FEATURE TWO DESIGN*/
+.single_feature_btn_light {
+	background-image: linear-gradient(158deg, #35e2fc 0%, #0da3fb 100%);
+	border-radius: 30px;
+	background-size: 200% auto;
+	border-style: none;
+	color: #fff;
+	font-weight: 700;
+	padding: 14px 40px;
+	transition: 0.5s;
+	text-transform: uppercase;
+	z-index: 1;
+	overflow: hidden;
+	display: inline-block;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	font-size: 14px;
+}
+.single_feature_btn_light:hover{
+color: #fff;
+background-position: right center;
+}
+
+/*
+ * ----------------------------------------------------------------------------------------
+ * 05.END FEATURE ONE AND FEATURE TWO DESIGN
+ * ----------------------------------------------------------------------------------------
+ */
+
+ 
+ 
+/*
+* ----------------------------------------------------------------------------------------
+* 06.START AMAZING FEATURES DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.our_service {}
+.single_service {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #eee;
+    margin-left: -1px;
+    margin-top: 30px;
+    padding: 40px;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    position: relative;
+}
+@media only screen and (max-width:768px) { 
+.single_service  {margin-bottom: 30px;}
+}
+.feature_icon {
+	background: #0da3fb none repeat scroll 0 0;
+	border: 1px solid #fff;
+	border-radius: 1px;
+	color: #fff;
+	font-size: 24px;
+	height: 60px;
+	left: 0;
+	line-height: 56px;
+	margin: -30px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	transition: all 0.3s ease 0s;
+	width: 60px;
+	margin-left: 40px;
+}
+.single_service h4 {
+    margin: 0;
+    padding-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+	margin-top:20px;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+.single_service p {
+    margin-bottom: 0;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 06.END AMAZING FEATURES DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06.START FEATURES DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.why_choose_us{padding-top:80px;}
+.single_feature {
+padding-top: 100px;
+padding-left:60px;
+padding-right:50px;
+}
+@media only screen and (max-width:768px) { 
+    .single_feature { padding-top: 0px }
+}
+@media only screen and (max-width:480px) { 
+    .single_feature { padding-top: 50px }
+}
+.feature_img {
+    margin: auto auto 0;
+}
+.single_feature i {
+	background: #0da3fb;
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	font-size: 28px;
+	height: 80px;
+	line-height: 80px;
+	margin: 0 auto 15px;
+	position: relative;
+	text-align: center;
+	width: 80px;
+	z-index: 3;
+}
+.single_feature h3 {
+	margin-top: 10px;
+	font-size: 44px;
+	font-weight: 700;
+	text-transform: capitalize;
+	line-height: 56px;
+}
+.single_feature span {
+	border-bottom: 1px dashed #0da3fb;
+	width: 80px;
+	display: block;
+	margin: 20px 0;
+}
+.single_feature p { margin-bottom: 0 }
+/*
+* ----------------------------------------------------------------------------------------
+* 06.END FEATURES DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07.START APP SCREENSHOT DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.slider {}
+
+.slick-slide {
+margin: 0px 20px;
+}
+
+.slick-slide img {
+width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+color:#3b7eff;
+}
+
+
+.slick-slide {
+transition: all ease-in-out .3s;
+opacity: .2;
+}
+
+.slick-active {
+opacity: .5;
+}
+
+.slick-current {
+opacity: 1;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 07.END APP SCREENSHOT DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08.START VIDEO DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.watch_video {
+padding-left:50px;
+}
+.watch_video h2 {
+	margin-bottom: 20px;
+	font-size: 32px;
+	line-height: 40px;
+}
+.watch_video p {
+	margin-bottom: 20px;
+}
+.video-play {
+	margin-top: 35px;
+	display: block;
+}
+.video-play i {
+	background: #0da3fb;
+	color: #fff;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 100px;
+	margin-right:15px;
+	display: inline-block;
+	box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.15);
+}
+.video-title {
+	font-weight: 600;
+	color: #0da3fb;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 08.END VIDEO DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 09.START PRICING DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.pricing_table{background:#1d293e;}
+.pricing-content{}
+.single-pricing{
+background:#fff;
+padding:40px 20px;
+border-radius:5px;
+position:relative;
+z-index:2;
+border:1px solid #eee;
+transition:0.3s;
+}
+@media only screen and (max-width:480px) { 
+.single-pricing {margin-bottom:30px;}
+}
+.single-pricing:hover{
+box-shadow:0px 60px 60px rgba(0,0,0,0.1);
+z-index:100;
+transform: translate(0, -10px);
+}
+.price-head h2 {
+	font-weight: 600;
+	margin-bottom: 0px;
+	text-transform: capitalize;
+	font-size: 26px;
+}
+.price-head span {
+	display: inline-block;
+	background: #0da3fb;
+	width: 6px;
+	height: 6px;
+	border-radius: 30px;
+	margin-bottom: 20px;
+	margin-top: 15px;
+}
+.price {
+	font-weight: 500;
+	font-size: 50px;
+	margin-bottom: 0px;
+}
+.single-pricing{}
+.single-pricing h5 {
+	font-size: 14px;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+}
+.single-pricing ul{
+list-style: none;
+margin-bottom: 20px;
+margin-top: 30px;
+}
+
+.single-pricing ul li{line-height: 35px;}
+.single-pricing a {
+	background-image: linear-gradient(158deg, #35e2fc 0%, #0da3fb 100%);
+	border-radius: 30px;
+	background-size: 200% auto;
+	border-style: none;
+	color: #fff;
+	font-weight: 700;
+	padding: 14px 40px;
+	transition: 0.5s;
+	text-transform: uppercase;
+	z-index: 1;
+	overflow: hidden;
+	display: inline-block;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	font-size: 14px;
+}
+.single-pricing a:hover{
+color: #fff;
+background-position: right center;
+}
+.single-pricing-white{background: #0da3fb;border: 1px solid #0da3fb;}
+.single-pricing-white ul li{color:#fff;}
+.single-pricing-white .price-head span{background: #fff;}
+.single-pricing-white h2{color:#fff;}
+.single-pricing-white h1{color:#fff;}
+.single-pricing-white h5{color:#fff;}
+/*
+* ----------------------------------------------------------------------------------------
+* 09.END PRICING DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 10.START TESTIMONIAL DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.testimonial {
+position: relative;
+padding:100px 0;
+}
+.testimonial:before {
+background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+content: "";
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;
+}
+.single_testimonial_title {
+	margin-top: 120px;
+}
+@media only screen and (max-width:768px) { 
+.single_testimonial_title {
+	margin-top:0px;
+	margin-bottom:60px;
+}
+}
+.single_testimonial_title h1 {
+	color: #fff;
+	font-size: 52px;
+	line-height: 62px;
+	margin-bottom: 20px;
+}
+.single_testimonial_title p{color:#fff;}
+
+.single_testimonial{
+background: #fff none repeat scroll 0 0;
+border: 1px solid #eee;
+margin-bottom: 10px;
+padding: 60px;
+}
+.testimonial_img{
+margin-bottom: 10px;
+overflow: hidden;
+text-align: center;
+}
+.testi_img img {
+	width: 90px;
+	height: 90px;
+	border-radius: 100px;
+}
+.testi_img h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+.testi_img h5 {
+	overflow: hidden;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+.single_testimonial i {
+	color: #ffc93c;
+	margin-bottom: 10px;
+}
+.single_testimonial p {
+	margin-bottom: 20px;
+}
+.owl-theme .owl-controls {
+    margin-top: 50px;
+    text-align: center;
+}
+.owl-theme .owl-controls .owl-page { display: inline-block }
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div { cursor: pointer }
+.owl-theme .owl-controls .owl-page span {
+	background-color: #0da3fb !important;
+	border-radius: 20px;
+	display: block;
+	height: 6px;
+	margin: 5px 3px;
+	width: 6px;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span { background-color: #fff }
+.owl-theme .owl-controls {
+  display: block !important;
+  margin-top:10px;
+  text-align: center;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 10.END TESTIMONIAL DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 11.START DOWNLOAD DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.download {
+  background: #0f3460 none repeat scroll 0 0;
+}
+.google-bg {
+	background: #0da3fb;
+	border-radius: 500px;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding: 15px 30px;
+	transition: all 0.3s ease 0s;
+}
+.btn-app-bg {
+	background: #fff none repeat scroll 0 0;
+	border-radius: 500px;
+	display: inline-block;
+	overflow: hidden;
+	margin-bottom: 20px;
+	padding: 15px 30px;
+	transition: all 0.3s ease 0s;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 11.END DOWNLOAD DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 12.START FAQ PAGE DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+.faq-title h1 { margin-top: 0 }
+.panel-default .panel-heading {
+    color: #1d293e;
+    background-color: #fff;
+    border-color: #eee;
+    font-size: 16px;
+    padding: 16px;
+}
+.panel-group .panel + .panel {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #EEEEEE;
+}
+.panel-body {
+    border-radius: 0;
+    font-size: 16px;
+    padding: 30px;
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+	border-top-color: #f5f8fa;
+	background: #f5f8fa;
+}
+.panel-heading { border-radius: 0px }
+.panel-title a {
+color: #1d293e;
+display: block;
+}
+.panel-title a::after {
+    content: "\f067";
+    font: 18px fontAwesome;
+    float: left;
+    margin-right: 25px;
+    margin-top: 2px;
+}
+.panel-title a::after {
+    content: "\f068";
+    font: 18px fontAwesome;
+    float: left;
+    margin-right: 25px;
+    background: #0da3fb;
+    color: #fff;
+    height: 49px;
+    width: 49px;
+    margin-left: -16px;
+    margin-top: -16px;
+    line-height: 55px;
+    text-align: center;
+}
+.panel-title a.collapsed::after {
+    content: "\f067";
+    font: 18px fontAwesome;
+    float: left;
+    margin-right: 25px;
+    background: #0da3fb;
+    color: #fff;
+    height: 49px;
+    width: 49px;
+    margin-left: -16px;
+    margin-top: -16px;
+    line-height: 55px;
+    text-align: center;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 12.END FAQ PAGE DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+
+/*
+* ----------------------------------------------------------------------------------------
+* 16.START CONTACT DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.contact_form{position: relative;}
+.single_address {
+padding: 30px 15px;
+border-radius: 6px;
+box-shadow: 10px 15px 18px rgba(23, 23, 36, 0.15);
+}
+@media only screen and (max-width:768px) { 
+.single_address {margin-bottom:30px;}
+}
+.single_address_one{background:#0da3fb;}
+.single_address_two{background:#0f3460;}
+.single_address_three{background:#2ca46d;}
+.single_address_four{background:#f54291;}
+@media only screen and (max-width:768px) { 
+    .single-address { margin-bottom: 20px; }
+}
+.single_address h4 {
+color: #fff;
+text-transform: capitalize;
+transition: all 0.2s ease 0s;
+}
+.single_address p {
+    margin-bottom: 0;
+    color: #fff;
+    -webkit-transition: all 0.2s ease 0s;
+            transition: all 0.2s ease 0s;
+}
+.contact-top-mt{margin-top:100px;}
+.get_in_touch{}
+.get_in_touch h1 {
+	font-size: 70px;
+	margin-top: 80px;
+	margin-bottom: 30px;
+}
+.get_in_touch p {
+	padding-right: 20px;
+}
+.contact {
+	margin-top:100px;
+	background: #fff;
+}
+.form-control {
+	background: #fff;
+	border-radius: 0;
+	border-bottom: 1px solid #eee;
+	box-shadow: none;
+	color: #1d293e;
+	font-size: 16px;
+	height: 52px;
+	padding: 15px;
+	transition: all 0.2s ease 0s;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+.form-control:focus {
+	background: #fff;
+    border-radius: 0;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid #0da3fb;
+    box-shadow: none;
+    outline: 0 none;
+}
+.btn-contact-bg {
+	background-image: linear-gradient(158deg, #35e2fc 0%, #0da3fb 100%);
+	border-radius: 30px;
+	background-size: 200% auto;
+	border-style: none;
+	color: #fff;
+	font-weight: 700;
+	padding: 14px 40px;
+	transition: 0.5s;
+	text-transform: uppercase;
+	z-index: 1;
+	overflow: hidden;
+	display: inline-block;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	font-size: 14px;
+}
+.btn-contact-bg:hover{
+color: #fff;
+background-position: right center;
+}
+.mb0 { margin-bottom: 0 }
+
+.partner-logo {
+	background: #0f3460;
+}
+.partner.owl-theme .owl-controls {
+display:none !important;
+}
+.map { height: 450px }
+.success {
+    background: #fff none repeat scroll 0 0;
+    color: #0da3fb;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 16.END CONTACT DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+/*
+* ----------------------------------------------------------------------------------------
+* 17.START SOCIAL PROFILE DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.footer_social {
+	margin-top: 30px;
+}
+.footer_social ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer_social ul li a i {
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	float: left;
+	transition: all 0.2s ease 0s;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 30px;
+	text-align: center;
+	margin-right: 10px;
+}
+.footer_social ul li a i:hover {
+    background: #0da3fb;
+    color: #fff;
+}
+.facebook{background: #1C58A1;}
+.twitter{background: #0CBCE3;}
+.google{background: #F04537;}
+.linkedin{background: #1C58A1;}
+.instagram{background: #B67F61;}
+.youtube{background: #E31B1B;}
+/*
+* ----------------------------------------------------------------------------------------
+* 17.END SOCIAL PROFILE DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.map iframe{
+width:100%;
+height:450px;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* .START FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
+.footer {
+background: #1d293e none repeat scroll 0 0;
+  padding:20px 0;
+}
+/*END FOOTER SOCIAL DESIGN*/
+.copyright p {
+color:#fff;
+margin-bottom: 0;
+padding-top: 10px;
+}
+@media only screen and (max-width:480px) { 
+.copyright p {text-align:center;}
+}
+/*
+* ----------------------------------------------------------------------------------------
+* .END FOOTER DESIGN
+* ----------------------------------------------------------------------------------------
+*/
